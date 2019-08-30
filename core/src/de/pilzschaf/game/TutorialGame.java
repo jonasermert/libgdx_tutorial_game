@@ -1,10 +1,12 @@
 package de.pilzschaf.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.assets.AssetManager;
 
 public class TutorialGame extends Game {
 
 	public static TutorialGame INSTANCE;
+	public final AssetManager assetManager = new AssetManager();
 
 	public TutorialGame() {
 		assert(TutorialGame.INSTANCE == null);
@@ -13,6 +15,6 @@ public class TutorialGame extends Game {
 
 	@Override
 	public void create () {
-		setScreen(new GameScreen());
+		setScreen(new LoadingScreen());
 	}
 }
